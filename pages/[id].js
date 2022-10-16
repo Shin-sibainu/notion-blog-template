@@ -232,6 +232,6 @@ export const getStaticProps = async (context) => {
       page,
       blocks: blocksWithChildren,
     },
-    revalidate: 1,
+    revalidate: 1, //ISR...前回から何秒以内のアクセスを無視するか指定します。
   };
 };
