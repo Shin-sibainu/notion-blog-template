@@ -87,13 +87,5 @@ export default function Home({ posts }) {
   );
 }
 
-export const getStaticProps = async () => {
-  const database = await getDatabase(databaseId);
+//SSGを追加
 
-  return {
-    props: {
-      posts: database,
-    },
-    revalidate: 1,
-  };
-};
